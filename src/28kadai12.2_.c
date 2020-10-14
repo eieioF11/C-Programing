@@ -29,29 +29,32 @@ void enqueue(struct cell *r)
 	r->next=NULL;
 	return;
 }
-
 struct cell *dequeue(char *key)
 {
 	struct cell *p;
-　　if(root==NULL)
-		return NULL;
-　　　p=root;
-	while(strcmp(p->key,key))p=p->next;
-	if(p->next==NULL&&p->prev==NULL)
-		root=NULL;
-	else if(p->next==NULL)
-		p->prev->next=NULL;
-	else if(p->prev==NULL)
+	p=root;
+	while(p->next!=NULL)
 	{
-		root=p->next;
-		root->prev=NULL;
+		if(strcmp(p->key,key)==0)
+		{
+			if(p->next==NULL)
+				p->prev->next=NULL;
+			else if(p->prev==NULL)
+			{
+				root=p->next;
+				root->next->prev=NULL;
+			}
+			else
+			{
+				p->prev->next=p->next;
+				p->next->prev=p->prev;
+			}
+			return p;
+			
+		}
+		p=p->next;
 	}
-	else
-	{
-		p->prev->next=p->next;
-		p->next->prev=p->prev;
-	}
-	return p
+	return NULL;
 }
 
 int main()
@@ -70,6 +73,7 @@ int main()
 				p=(struct cell*)malloc(sizeof(struct cell));
 				strcpy(p->key,in_key);
 				strcpy((char*)p->data,(char*)in_data);
+				printf("%s\n",p->key);
 				enqueue(p);
 			break;
 			case 'D':
@@ -92,36 +96,5 @@ int main()
 	return 0;
 }
 /*
-＜実行結果＞
-eiji@DESKTOP-2RBKBSJ:/mnt/c/Users/Eiji Nishizawa/OneDrive/プログラム基礎課題$ gcc -Wall 28kadai12.2.c
-eiji@DESKTOP-2RBKBSJ:/mnt/c/Users/Eiji Nishizawa/OneDrive/プログラム基礎課題$ ./a.out
-Please input ENQ(E) or DEQ(D):E
-Input Key and data:A abcd
-Please input ENQ(E) or DEQ(D):E
-Input Key and data:B bcde
-Please input ENQ(E) or DEQ(D):E
-Input Key and data:C cdef
-Please input ENQ(E) or DEQ(D):D
-Input Key:B
-Key=B,data=bcde
-Please input ENQ(E) or DEQ(D):D
-Input Key:C
-Key=C,data=cdef
-Please input ENQ(E) or DEQ(D):D
-Input Key:A
-Key=A,data=abcd
-Please input ENQ(E) or DEQ(D):D
-Input Key:A
-No data!
-Please input ENQ(E) or DEQ(D):D
-Input Key:B
-No data!
-Please input ENQ(E) or DEQ(D):D
-Input Key:C
-No data!
-Please input ENQ(E) or DEQ(D):D
-Input Key:d
-No data!
-Please input ENQ(E) or DEQ(D):q
-eiji@DESKTOP-2RBKBSJ:/mnt/c/Users/Eiji Nishizawa/OneDrive/プログラム基礎課題$ 
+
 */
