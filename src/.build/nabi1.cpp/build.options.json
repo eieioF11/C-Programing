@@ -1,0 +1,10 @@
+{
+  "builtInLibrariesFolders": "C:\\Users\\eieio\\Documents\\robot\\arduino-1.8.3\\libraries",
+  "customBuildProperties": "build.warn_data_percentage=75,runtime.tools.avr-gcc.path=C:\\Users\\eieio\\Documents\\robot\\arduino-1.8.3\\hardware\\tools\\avr,runtime.tools.avrdude.path=C:\\Users\\eieio\\Documents\\robot\\arduino-1.8.3\\hardware\\tools\\avr,runtime.tools.arduinoOTA.path=C:\\Users\\eieio\\Documents\\robot\\arduino-1.8.3\\hardware\\tools\\avr",
+  "fqbn": "arduino:avr:uno",
+  "hardwareFolders": "C:\\Users\\eieio\\Documents\\robot\\arduino-1.8.3\\hardware",
+  "otherLibrariesFolders": "C:\\Users\\eieio\\Documents\\robot\\arduino-1.8.3\\libraries",
+  "runtime.ide.version": "10600",
+  "sketchLocation": "c:\\Users\\eieio\\Dropbox\\office\\program\\Cprogram\\nabi1.cpp",
+  "toolsFolders": "C:\\Users\\eieio\\Documents\\robot\\arduino-1.8.3\\tools-builder,C:\\Users\\eieio\\Documents\\robot\\arduino-1.8.3\\hardware\\tools\\avr"
+}
