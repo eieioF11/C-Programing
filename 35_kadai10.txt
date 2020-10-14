@@ -1,0 +1,41 @@
+/*************************************
+T3 35 西澤　英志
+*************************************/
+#include<stdio.h>
+
+/*演習9-3*//*
+#define num 10
+int main(void)
+{
+	int i,j;
+	char s[num][128];
+	for(i=0;i<num;i++)
+	{
+		printf("s[%d]:",i);
+		scanf("%s",s[i]);
+		if(s[i][0]=='$'&&s[i][1]=='$'&&s[i][2]=='$'&&s[i][3]=='$'&&s[i][4]=='$')break;
+	}
+	for(j=0;j<i;j++)printf("s[%d]=\"%s\"\n",i,s[j]);
+	
+	return 0;
+}*/
+/*演習9-5*/
+int str_char(const char s[],int c)
+{
+	int i;
+	for(i=0;i<c;i++)
+	{
+		if(s[i]=='c')return i;
+		if(s[i]=='\0')return -1;
+		printf("%d\n",i);
+	}
+}
+int main(void)
+{
+	int i,n;
+	char str[128];
+	printf("文字列を入力してください\n");
+	scanf("%s",str);
+	printf("%s c=%d",str,str_char(str,128));
+	return 0;
+}
