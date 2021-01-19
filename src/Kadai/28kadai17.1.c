@@ -1,7 +1,7 @@
 /*
 file name  :28kadai17.1.c
 Producer   :Nishizawa Eiji
-Description:
+Description:skip table creation
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,7 +20,6 @@ void skiptable(int *table, const char *pattern, int ptn_len)
     {
         table[(int)pattern[i]] = ptn_len - i - 1;
     }
-
     /*表示*/
     printf("[table]  : default: step=%d\n", ptn_len);
     for (int i = 0; i < BM_TABLE_SIZE; i++)
@@ -32,9 +31,9 @@ void skiptable(int *table, const char *pattern, int ptn_len)
 
 int main()
 {
-    const char *pattern="television";
+    const char *pattern="television";//パターン
     int table[BM_TABLE_SIZE];//スキップテーブル
-    int ptn_len = strlen(pattern);
+    int ptn_len = strlen(pattern);//パターンの長さ
     skiptable(table, pattern, ptn_len);
 
     return 0;
