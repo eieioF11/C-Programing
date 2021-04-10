@@ -1,6 +1,6 @@
 /*
 file name  :28kadai13.2.c
-Producer   :Nishizawa Eiji
+Producer   :
 Description:Hash chain method
 */
 #include <stdio.h>

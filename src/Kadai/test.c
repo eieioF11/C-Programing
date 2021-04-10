@@ -1,6 +1,6 @@
 /*
 file name  :Test.c
-Producer   :Nishizawa Eiji
+Producer   :
 Description:
 */
 #include<stdio.h>

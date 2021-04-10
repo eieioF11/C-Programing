@@ -1,6 +1,6 @@
 /*
 file name  :28kadai17.1.c
-Producer   :Nishizawa Eiji
+Producer   :
 Description:skip table creation
 */
 #include <stdio.h>
