@@ -14,7 +14,8 @@ int main(void)
 	
 	struct sockaddr_in addr;
 	addr.sin_family = AF_INET;
-	addr.sin_addr.s_addr = inet_addr("172.16.30.142");
+	//addr.sin_addr.s_addr = inet_addr("172.16.30.142");
+	addr.sin_addr.s_addr = inet_addr("172.16.30.143");
 	addr.sin_port = htons(8000);
 	if(connect(s,(struct sockaddr *)&addr,sizeof(addr)) < 0)
 	{
